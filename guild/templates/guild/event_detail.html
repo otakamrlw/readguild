@@ -1,0 +1,13 @@
+{% extends 'guild/base.html' %}
+
+{% block content %}
+    <div class="event">
+        {% if event.published_date %}
+            <div class="date">
+                {{ event.published_date }}
+            </div>
+        {% endif %}
+        <h2>{{ event.title }}</h2>
+        <p>{{ event.text|linebreaksbr }}</p>
+    </div>
+{% endblock %}

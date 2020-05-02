@@ -25,7 +25,7 @@ SECRET_KEY = 'ssy#%^j&q97zhv$)w-i%uun-nhx+mf9)83!2t=x(2_%y47r9)7'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['readguild.pythonanywhere.com']
+ALLOWED_HOSTS = ['readguild.pythonanywhere.com', 'localhost']
 
 
 # Application definition

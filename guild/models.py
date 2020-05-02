@@ -23,11 +23,12 @@ class Choice(models.Model):
     def __str__(self):
         return self.choice_text
 
+
 class ReadingEvent(models.Model):
     host = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, null=True)
-    title = models.CharField(max_length=200, null=True)
+    title = models.CharField(max_length=200,null=True)
     event_text = models.TextField()
-    created_date = models.DateTimeField(default=timezone.now, name='date published')
+    created_date = models.DateTimeField(default=timezone.now)
     event_date = models.DateTimeField(blank=True, null=True, name='date of the event')
 
     # -------TO DO ------------
@@ -40,7 +41,7 @@ class ReadingEvent(models.Model):
         self.save()
 
     def __str__(self):
-        return self.title
+        return str(self.title)
 
     def was_published_recently(self):
         return self.pub_date >= timezone.now() - datetime.timedelta(days=1)
